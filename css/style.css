@@ -7,6 +7,8 @@
     font-family: "Roboto", sans-serif;
 }
 
+/* Header */
+
 h1{
     font-family: 'Fredoka', sans-serif;
     text-align: center;
@@ -15,14 +17,40 @@ h1{
     color: rgb(229, 49, 112);
 }
 
+/* Container */
+
 .container{
-    max-width: 1200px;
+    max-width: 1100px;
     margin: auto;
     margin-top: 40px;
 }
 
+.container::after{
+    display: table;
+    content: "";
+    clear: both;
+}
+
+p{
+    text-align: center;
+}
+
 .row-container{
     margin-top: 50px;
+}
+
+.row-container::after{
+    display: table;
+    content: "";
+    clear: both;
+}
+
+/* Blocco */
+
+.block{
+    box-shadow: 0px 0px 7px black;
+    width: 350px;
+    float: left;
 }
 
 img{
@@ -56,6 +84,7 @@ a{
     text-decoration: none;
 }
 
-img, .box{
-    box-shadow: 0px 0px 7px black;
+.row-container .block:nth-of-type(2){
+    margin-left: calc((1100px - 350px * 3)/2);
+    margin-right: calc((1100px - 350px * 3)/2);
 }
